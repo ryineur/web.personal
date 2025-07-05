@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Annur Syahrin - CV Portfolio</title>
+
+  <!-- Google Fonts & Swiper CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Hero Background Style -->
+  <style>
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(94,70,56,0.3), rgba(94,70,56,0.3)),
+        url("assets/images/img.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 2rem;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .hero-text {
+      background: rgba(247, 242, 238, 0.8);
+      color: #5e4638;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Hallo sahabat ryineur</h1>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h2>Welcome</h2>
+      <p> Steps of Story @ryineur</p>
+    </div>
+  </section>
+<!-- About Me -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    Saya adalah mahasiswa aktif Jurusan Data Sains Universitas Cakrawala. Selain fokus di bidang akademik dan organisasi, saya juga gemar membuat konten digital di Instagram dan TikTok tentang kehidupan, inspirasi, serta perjalanan kecil sehari-hari 🌷✨.
+  </p>
+  <p>
+    Menulis cerita fiksi menjadi ruang bagi saya untuk mengekspresikan ide, menenangkan diri, dan mengasah kreativitas 🍃🖋️.
+  </p>
+  <ul class="biodata">
+    <li><strong>📌 Nama:</strong> Annur Syahrin (Ririn)</li>
+    <li><strong>📆 Tahun Lahir:</strong> 2005</li>
+    <li><strong>🏡 Domisili:</strong> Indonesia (Jabodebek)</li>
+  </ul>
+</section>
+
+
+  <!-- Experience -->
+  <section id="experience" class="experience">
+    <h2>Aktivitas & Pengalaman</h2>
+    <ul>
+      <li>Community Event Specialist - Beneran Indonesia</li>
+      <li>Guest Experience Crew - Restaurant</li>
+      <li>Creative Content Creator</li>
+      <li>Wattpad Creative Author</li>
+      <li>Usher Booth Campus</li>
+      <li>Fizzo Exclusive Author</li>
+      <li>Freelance Marketing - Hattin Tours</li>
+    </ul>
+    </section>
+
+<section id="experience"class="experience">
+  <h3>experience projek & content</h3>
+    <p><a href="https://www.instagram.com/reel/DJoafPVSnoA/" target="_blank">Content Reels di Instagram</a></p>
+    <p><a href="https://www.wattpad.com/story/353615786" target="_blank">Wattpad Books</a></p>
+    <p><a href="https://www.figma.com/proto/ne2z6f7QBLIa1evdYmFEgG/Movemint-Design?node-id=284-2383" target="_blank">Figma App - Movemint</a></p>
+    <p><a href="https://www.tiktok.com/@hazelnure" target="_blank">@hazelnure di TikTok</a></p>
+  </section>
+
+    <!-- Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="WhatsApp Image 2024-10-25 at 03.12.40.jpeg" alt="Kegiatan 1" /></div>
+        <div class="swiper-slide"><img src="WhatsApp Image 2024-10-25 at 03.32.02.jpeg" alt="Kegiatan 2" /></div>
+        <div class="swiper-slide"><img src="WhatsApp Image 2025-07-05 at 22.46.03_c40c0d3c.jpg" alt="Kegiatan 3" /></div>
+        <div class="swiper-slide"><img src="volunteer.jpeg" alt="Kegiatan 4" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:annursyahrin.info@gmail.com">Email Saya</a></p>
+    <p><a href="https://wa.me/6285814569968" target="_blank">Chat via WhatsApp</a></p>
+    <p><a href="https://www.instagram.com/ryineur" target="_blank">Instagram @ryineur</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Annur Syahrin. Tugas pembuatan CV.</p>
+  </footer>
+
+  <!-- JS Swiper & Background Image Slider -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+<script>
+  const hero = document.querySelector(".hero");
+  const bgImages = [
+    "assets/images/img1.jpg",
+    "assets/images/img2.jpg",
+    "assets/images/img3.jpg"
+  ];
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % bgImages.length;
+    hero.style.backgroundImage = `linear-gradient(rgba(94,70,56,0.3), rgba(94,70,56,0.3)), url('${bgImages[index]}')`;
+  }, 4000);
+</script>
+
+</body>
+</html>
